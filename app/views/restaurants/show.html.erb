@@ -3,11 +3,22 @@
   <p><%= @restaurant.address %></p>
   <p><%= @restaurant.phone_number %></p>
   <p><%= @restaurant.category %></p>
-  <ul>
-    <% @restaurant.reviews.each do |review| %>
-      <li><%= review.content %> (<%= review.rating %>)</li>
-    <% end %>
-  </ul>
+
+  <h3 class="my-3">Reviews</h3>
+
+  <div class="card my-3">
+    <ul class="list-group list-group-flush">
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item"> <% review.rating.times do %>
+          <span class="mt-3 p-2"><i class="fas fa-star yellow"></i></span>
+        <% end %>
+          <p class="mt-3 p-1"><%= review.content %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+<h3 class="my-3" style="font-size: 24px;">Add a review:</h3>
 
   <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
 
