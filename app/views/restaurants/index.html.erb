@@ -7,10 +7,17 @@
 <div class="container">
   <% @restaurants.each do |restaurant| %>
     <div class="card-product my-3">
-      <img src="https://picsum.photos/seed/<%= rand(0..100) %>/200/300">
+      <div class="card-image">
+        <img src="https://picsum.photos/seed/<%= rand(0..100) %>/200/300">
+      </div>
     <div class="card-product-infos">
       <h2><i class="fas fa-utensils yellow mr-3"></i><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
       <p><%= restaurant.category %></p>
+      <p>random content</p>
+      <p>random content</p>
+      <p>random content</p>
+      <p>random content</p>
+    
       <%= link_to "More details", restaurant_path(restaurant), class: "btn btn-ghost" %>
     </div>
   </div>

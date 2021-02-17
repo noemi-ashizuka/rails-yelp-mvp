@@ -19,11 +19,9 @@
   </div>
 
 <h3 class="my-3" style="font-size: 24px;">Add a review:</h3>
+<%= render 'reviews/form', restaurant: @restaurant, review: @review %>
 
-  <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
-
-  <%= link_to restaurants_path do %>
-    <i class="fas fa-arrow-circle-left yellow mt-3" style="font-size: 24px"></i>
-  <% end %>
-
+<%= link_to restaurants_path do %>
+  <i class="fas fa-arrow-circle-left yellow mt-3" style="font-size: 24px"></i>
+<% end %>
 </div>
