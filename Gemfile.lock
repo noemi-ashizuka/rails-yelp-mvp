@@ -89,15 +89,10 @@ GEM
     minitest (5.14.0)
     msgpack (1.3.3)
     nio4r (2.5.2)
-<<<<<<< HEAD
-    nokogiri (1.10.8)
-      mini_portile2 (~> 2.4.0)
     pg (1.2.3)
-=======
     nokogiri (1.11.1)
-      mini_portile2 (~> 2.5.0)
-      racc (~> 1.4)
->>>>>>> f85edf8414df58033a66a5c8ce621fc08145ea5a
+    mini_portile2 (~> 2.5.0)
+    racc (~> 1.4)
     puma (3.12.6)
     racc (1.5.2)
     rack (2.2.3)
