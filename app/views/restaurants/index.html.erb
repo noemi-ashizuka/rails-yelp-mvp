@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-<h1>All our restaurants</h1>
-    <%= link_to new_restaurant_path do %>
-      <h3><i class="fas fa-utensils yellow mr-3"></i>Add new Restaurant</h3>
-    <% end %>
+  <h1>All our restaurants</h1>
+  <%= link_to new_restaurant_path do %>
+    <h3><i class="fas fa-utensils yellow mr-3"></i>Add new Restaurant</h3>
+  <% end %>
 </div>
 <div class="container">
   <% @restaurants.each do |restaurant| %>
@@ -10,16 +10,12 @@
       <div class="card-image">
         <img src="https://picsum.photos/seed/<%= rand(0..100) %>/200/300">
       </div>
-    <div class="card-product-infos">
-      <h2><i class="fas fa-utensils yellow mr-3"></i><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
-      <p><%= restaurant.category %></p>
-      <p>random content</p>
-      <p>random content</p>
-      <p>random content</p>
-      <p>random content</p>
-    
-      <%= link_to "More details", restaurant_path(restaurant), class: "btn btn-ghost" %>
+      <div class="card-product-infos">
+        <h2><i class="fas fa-utensils yellow mr-3"></i><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+        <p><%= restaurant.category %></p>
+      
+        <%= link_to "More details", restaurant_path(restaurant), class: "btn btn-ghost" %>
+      </div>
     </div>
-  </div>
-    <% end %>
+  <% end %>
 </div>
